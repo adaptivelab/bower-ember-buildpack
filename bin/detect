@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if ! type -p ember; then
+  echo "Ember executable not found"
+  exit 1
+fi
+
+if ! type -p bower; then
+  echo "Bower executable not found"
+  exit 1
+fi
+
+if ! test -f $1/bower.json; then
+  echo "'bower.json' not found"
+  exit 1
+fi
+
+exit 0
